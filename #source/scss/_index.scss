@@ -1,0 +1,133 @@
+canvas#canvas {
+    filter: blur(12px) drop-shadow(0 0 20px rgba(117, 81, 161, 1));
+    display: block;
+    z-index: -1;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    opacity: 0.6;
+    // background-color:#000;
+}
+
+.welcomescreen {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    min-height: 800px;
+}
+
+.welcomescreen__bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+}
+
+.welcomescreen__inner {
+    position: relative;
+    height: 100vh;
+}
+
+.welcomescreen__title {
+    padding-top: 15%;
+    text-align: center;
+
+    h1 {
+        line-height: 122%;
+        color: #FFFFFF;
+        font-weight: 600;
+        font-size: 83px;
+        font-style: normal;
+
+        span {
+            font-style: italic;
+            font-weight: 400;
+            font-size: 32px;
+        }
+    }
+}
+
+.welcomescreen__descr {
+    position: absolute;
+    bottom: 10%;
+    right: 0px;
+    display: flex;
+    align-items: center;
+    align-items: center;
+
+    p {
+        width: 364px;
+        margin-left: 43px;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 17px;
+        line-height: 150%;
+        color: #FFFFFF;
+    }
+
+    svg {
+        width: 74px;
+        height: 74px;
+    }
+    a{
+        transition: .4s;
+        &:hover{
+            transform: rotate(30deg);
+        }
+    }
+}
+
+.welcomescreen__btn {
+    position: absolute;
+    display: block;
+    bottom: 10%;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    p {
+        transform: rotate(-90deg) translateX(40%);
+        font-weight: 400;
+        font-size: 17px;
+        line-height: 150%;
+        color: rgba(135, 134, 136, 0.52);
+    }
+    svg{
+        width: 27px;
+        height: 27px;
+        animation: arrowAnim 2s ease-in-out infinite;
+    }
+}
+
+@keyframes arrowAnim {
+    0%{
+        transform: translateY(0);
+        opacity: 0;
+    }
+
+    10%{
+        transform: translateY(0);
+        opacity: 0;
+    }
+
+    90%{
+        transform: translateY(15px);
+        opacity: 1;
+    }
+    100%{
+        transform: translateY(15px);
+        opacity: 0;
+    }
+}
+
+// section portfolio
+
+.portfolio{
+    height: 100vh;
+}
